@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerName donorconnect.local
+    DocumentRoot "C:/xampp/htdocs/donorconnect/frontend/dist"
+
+    <Directory "C:/xampp/htdocs/donorconnect/frontend/dist">
+        Options -Indexes
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /api "C:/xampp/htdocs/donorconnect/api"
+    <Directory "C:/xampp/htdocs/donorconnect/api">
+        Options -Indexes
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>

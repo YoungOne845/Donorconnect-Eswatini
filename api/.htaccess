@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine On
+
+# Never expose configuration, source, logs, scripts or environment files.
+RewriteRule ^(?:config|src|routes|scripts|storage)/ - [F,L,NC]
+RewriteRule ^(?:\.env|bootstrap\.php)$ - [F,L,NC]
+
+# Let real files pass through.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route everything else through the API front controller.
+RewriteRule ^ index.php [QSA,L]

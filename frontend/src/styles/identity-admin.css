@@ -1,0 +1,132 @@
+.identity-preview {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 16px;
+  border: 1px solid #bbf7d0;
+  border-radius: 13px;
+  background: #f0fdf4;
+}
+
+.identity-preview > svg {
+  flex: 0 0 auto;
+  color: #15803d;
+}
+
+.identity-preview strong,
+.identity-preview p {
+  display: block;
+}
+
+.identity-preview p {
+  margin-top: 3px;
+  color: #3f5f49;
+  font-size: 13px;
+}
+
+.identity-preview.underage {
+  border-color: #fed7aa;
+  background: #fff7ed;
+}
+
+.identity-preview.underage > svg {
+  color: #c2410c;
+}
+
+.identity-preview.underage p {
+  color: #7c4a26;
+}
+
+.derived-date-field {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e1e5eb;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.derived-date-field > svg {
+  color: #b91c1c;
+}
+
+.derived-date-field span,
+.derived-date-field strong {
+  display: block;
+}
+
+.derived-date-field span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.derived-date-field strong {
+  margin-top: 3px;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.button-danger {
+  color: #fff;
+  background: linear-gradient(135deg, #991b1b, #dc2626);
+  box-shadow: 0 10px 24px rgba(153, 27, 27, .2);
+}
+
+.button-danger:hover:not(:disabled) {
+  box-shadow: 0 14px 30px rgba(153, 27, 27, .3);
+}
+
+.danger-icon {
+  color: #b91c1c;
+}
+
+.danger-icon:hover {
+  color: #fff;
+  background: #b91c1c;
+}
+
+.danger-dialog {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 16px;
+  border: 1px solid #fecaca;
+  border-radius: 14px;
+  background: #fff7f7;
+}
+
+.danger-dialog > svg {
+  flex: 0 0 auto;
+  color: #b91c1c;
+}
+
+.danger-dialog strong {
+  display: block;
+  color: #7f1d1d;
+  font-size: 16px;
+}
+
+.danger-dialog p {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.modal-action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .modal-action-row {
+    flex-direction: column-reverse;
+  }
+
+  .modal-action-row .button {
+    width: 100%;
+  }
+}

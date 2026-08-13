@@ -1,0 +1,18 @@
+DonorConnect PDO HY093 Registration Hotfix
+
+This hotfix fixes duplicate named PDO placeholders in three files:
+- api/src/Controllers/AuthController.php
+- api/src/Controllers/AdminController.php
+- api/scripts/create_admin.php
+
+Installation:
+1. Stop Vite with Ctrl+C.
+2. Back up the three current files.
+3. Extract this ZIP directly into C:\xampp\htdocs\donorconnect
+4. Choose Replace files in destination.
+5. Restart Apache.
+6. Start Vite again from frontend with: npm run dev
+7. Hard-refresh the browser with Ctrl+F5.
+8. Retry donor registration.
+
+No SQL migration and no npm install are required.
