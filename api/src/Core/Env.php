@@ -11,8 +11,8 @@ final class Env
     public static function load(string $path): void
     {
         if (!is_file($path)) {
-            throw new \RuntimeException("Missing environment file: {$path}");
-        }
+       return;
+       }
 
         $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         if ($lines === false) {
